@@ -1,0 +1,4 @@
+{
+  "name": "Firebase",
+  "displayName": "Firebase"
+}
