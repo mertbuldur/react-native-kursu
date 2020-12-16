@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Currency Back End </title>
+    </head>
+    <body>
+        <input type="text" id="rate" placeholder="Şuanki Döviz kurunu giriniz">
+
+
+        <button>Döviz Kurunu Güncelle</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        socket.on("welcome-html",()=>{
+            alert("Uygulamaya biri katıldı");
+        });
+
+        var button = document.querySelector('button');
+        button.onclick = function () {
+           // const value = document.getElementById("rate").value;
+           // console.log(value);
+           /* socket.emit('send',{
+                value
+            });
+
+            */
+            socket.emit('update-currency');
+        }
+    </script>
+    </body>
+</html>
